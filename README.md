@@ -1,3 +1,7 @@
+<p align="center">
+  <img src="python_autograd_logo.png" alt="Autograd Logo" width="200"/>
+</p>
+
 # python-autograd
 A tiny automatic differentiation engine written in pure Python.  
 Built for **learning**, not performance — and it has some unique twists that make the math feel natural.
