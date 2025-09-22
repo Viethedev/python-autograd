@@ -59,5 +59,5 @@ Here, every derivative is explicitly propagated and stored.
 
 ### That means:
   You can literally “see” the chain rule at work.
-  You’ll get a clear error if you ask for ∂f/∂z when z has no path to f.
+  You’ll get a clear error if you ask for ∂f/∂y when y has no path to f.
   Perfect for classrooms, tutorials, and self-learners who want to understand.
