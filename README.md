@@ -11,10 +11,14 @@ Built for **learning**, not performance — and it has some unique twists that m
   ```python
   dv(f, x)   # instead of dv(f, "x")
   ```
+### Unique naming system
+  ```python
+  x = Gradable(x=2.0) # The name will be assigned as we type x=2.0 inside Gradable
+  ```
 ### Relation-aware derivatives: allow you to receive relation alert or not!
   ```python
-  x = Value(1)
-  y = Value(2)
+  x = Gradable(1)
+  y = Gradable(2)
   z = x + x
   print(f"dz/dy = {dv(z, y)}")
   ```
@@ -34,12 +38,23 @@ Built for **learning**, not performance — and it has some unique twists that m
   ```
   dz/dy = 0
   ```
+### Inspect system with pretty printing
+  ```python
+  x = Gradable(x=1)
+  y = 2 * x
+  y.name = "y"  # Dependant will not own its name yet due to inner mechanism 
+  inspect_dv(y, x)
+  ```
+  Output
+  ```
+  dy/dx (x=1) = 2
+  ```
 ## Quick Example
 ```python
-from autograd import Value, sin, exp, dv
+from autograd import Gradable, sin, exp, dv
 
-x = Value(2.0)
-y = Value(1.0)
+x = Gradable(2.0)
+y = Gradable(1.0)
 
 f = sin(x ** 2) * exp(x) # f(x) = sin(x²) * e^x
 
