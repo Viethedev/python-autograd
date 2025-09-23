@@ -29,8 +29,8 @@ Built for **learning**, not performance — and it has some unique twists that m
 
   But if you set relation_alert=False:
   ```python
-  x = Value(1)
-  y = Value(2)
+  x = Gradable(1)
+  y = Gradable(2)
   z = x + x
   print(f"dz/dy = {dv(z, y, relation_alert=False)}")
   ```
